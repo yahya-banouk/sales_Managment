@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="WpfApp1.drv2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF48D7EE" Offset="0"/>
+                <GradientStop Color="#FF0E0ED3" Offset="1"/>
+                <GradientStop Color="#FF56D462" Offset="0.292"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" HorizontalAlignment="Right"  Margin="0,10,175,10" Width="170">
+            <Label Content="CHERCHER CLI NOM :" Foreground="White" FontSize="16"  Margin="0,14,0,0"/>
+            <TextBox Width="180" HorizontalAlignment="Right" Margin="0,0,-15,0" x:Name="GETBYNOMCLI" TextChanged="CHERCHNOMCLI"/>
+            <!--<Label Content="Nom Client  :"  Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="0 0 0 0" x:Name="CHERCHECLIENTICE"/>-->
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" HorizontalAlignment="Left"  Margin="90,10,0,10" Width="165">
+            <Label Content="CHERCHER REFER :" Foreground="White" FontSize="16"  Margin="0,14,0,0"/>
+            <TextBox Width="165" HorizontalAlignment="Left" x:Name="GETBYREF" TextChanged="CHERCHREFER"/>
+            <!--<Label Content="Nom Client  :"  Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="0 0 0 0" x:Name="CHERCHECLIENTICE"/>-->
+
+        </StackPanel>
+
+        <StackPanel Margin="0 35 0 20"  Grid.Row="0" Grid.RowSpan="1" Grid.Column="3" Grid.ColumnSpan="4" Orientation="Horizontal"  HorizontalAlignment="Right">
+            <!--<RadioButton Content="tout" FontSize="18" Margin="5 5 0 10" Width="90"></RadioButton>
+            <RadioButton Content="NUM VENTE" FontSize="18" Margin="0 5 5 10" Width="130"></RadioButton>
+            <RadioButton Content="ICE" FontSize="18" Margin="0 5 5 10" Width="60"></RadioButton>
+            <RadioButton Content="Reference" FontSize="18" Margin="0 5 5 10" Width="100"></RadioButton>-->
+
+            <!--<TextBox Width="150" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="2" Margin="10 10 10 10"/>-->
+            <Button Content="Chercher et actualiser " Height="40" Width="150" Grid.Column="3" Click="tabledescommande" Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial"></Button>
+        </StackPanel>
+
+
+        <GroupBox Header="AJOUTER UNE VENTE"  FontSize="14" Foreground="Black" HorizontalAlignment="Left" Height="440" Margin="0,0,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" Width="370" RenderTransformOrigin="-4.416,0.408" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" HorizontalAlignment="Left"  Margin="30 10">
+
+            <Label Content="Numero de Vente :"  Margin="10 5 0 0"/>
+            <TextBox Width="119"   HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="A" GotFocus="IN"/>
+
+            <Label Content="Quantité à vendre :"  Margin="10 0 0 0"/>
+            <TextBox Width="119" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="C"/>
+            <Label Content="Mode de paiement:" Margin="10 0 0 0"/>
+            <TextBox Width="118" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="D" />
+
+            <Label Content="Reference d'article" Margin="10 0 0 0"/>
+            <TextBox Width="118" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="E"/>
+            <Label Content="Remise :" Margin="10 0 0 0"/>
+            <TextBox Width="118" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="H"/>
+            <Label Visibility="Collapsed" Content="Numero de papiers :" Margin="10 0 0 0"/>
+            <TextBox Visibility="Collapsed" Width="118" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="F"/>
+            <Label Content="Dqte de vente :" Margin="10 0 0 0"/>
+            <DatePicker  x:Name="date" Margin="0 0 0 10" Width="118"/>
+            
+            <RadioButton  x:Name="meme" FontFamily="Bahnschrift" Checked="meme_Checked" FontSize="15" Foreground="White" >Meme FACTURE</RadioButton>
+            <RadioButton x:Name="nonmeme" FontFamily="Bahnschrift" Checked="nonmeme_Checked" FontSize="15" Foreground="White" >Nouvelle FACTURE</RadioButton>
+            
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3" HorizontalAlignment="Left"  >
+            <Label Content="Nom vendeur" Margin="10 15 0 0"/>
+            <TextBox Width="119" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="G"/>
+            
+            <Label Content="Nom Client" Margin="10 0 0 0"/>
+            <TextBox Width="119" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="nomclient" TextChanged="TROUVEICE"/>
+            
+
+            <Label Content="ICE Client :"  Margin="10 0 0 0"/>
+            <TextBox Width="119" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="B" LostFocus="SORTIEICE1" TextChanged="ICECHANGEMENT"/>
+            <Label Content="PRIX :" Margin="10 0 0 0"/>
+            <TextBox Width="119" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="I"/>
+            <Label Content="Date d'échéance :" Margin="10 0 0 0"/>
+            <DatePicker  Name="date2" Width="119" />
+
+
+            <!--<StackPanel Margin="0 35 0 0"  Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Left">
+                <RadioButton Content="CLIENT FIDELE 1" FontSize="18" Margin="5 5 5 10" Width="150"></RadioButton>
+                <RadioButton Content="CLIENT FIDELE 2" FontSize="18" Margin="5 5 5 10" Width="150"></RadioButton>
+            </StackPanel>-->
+            <Separator></Separator>
+
+            <Button Content="Enregistrer la Vente" Height="40" Width="130" Margin="0 0 0 5"  Click="isert" Foreground="White" FontSize="14" FontFamily="arial" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="LightSeaGreen" Offset="0"/>
+                        <GradientStop Color="#66213BB4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="BL" Height="20" Width="90" Margin="0 0 0 3"  Click="bl" Background="Cyan"></Button>
+            <Button Content="BC" Height="20" Width="90" Margin="0 0 0 3"  Click="bc" Background="Cyan"></Button>
+
+            <Button Content="FACTURE" Height="20" Width="90" Margin="0 0 0 3"  Click="factur" Background="Cyan"></Button>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1"  Margin="120,10.333,30,9.667">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CCCD0000" Offset="0"/>
+                    <GradientStop Color="#99303CB4" Offset="1"/>
+                    <GradientStop Color="#B2CF7272" Offset="0.49"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Content="NUMERO DE VENTE :" Width="120"  Margin="10 0 0 0"/>
+            <TextBox Width="150" HorizontalAlignment="Center" Margin="50,0" x:Name="SUP"/>
+
+            <!--<Button Content="Imprimer avoir " Width="93" Height="20"  Margin="50 3" ></Button>-->
+            <Button Content="SUPRIMMER" Width="150"   Margin="50 13" Click="Button_Click" Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial"></Button>
+        </StackPanel>
+
+        <DataGrid RowBackground="White" AlternatingRowBackground="Gray" x:Name="VNT" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="190,0,10,-0.333" SelectedCellsChanged="VENTESELECT">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6DC98F" Offset="0"/>
+                    <GradientStop Color="#7F0A539C" Offset="0.998"/>
+                    <GradientStop Color="#9E368896" Offset="0.549"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+        </DataGrid>
+    </Grid>
+</UserControl>

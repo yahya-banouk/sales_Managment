@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="WpfApp1.drv7"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF49B039" Offset="0"/>
+                <GradientStop Color="#FF90D9E4" Offset="1"/>
+                <GradientStop Color="#FF1791B6" Offset="0.172"/>
+                <GradientStop Color="#FF0909D3" Offset="0.547"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" HorizontalAlignment="Right"  Margin="0,10,175,10" Width="170">
+            <Label Content="CHERCHER NOM :" Foreground="White" FontSize="16"  Margin="0,14,0,0"/>
+            <TextBox Width="180" HorizontalAlignment="Right" Margin="0,0,-15,0" x:Name="GETBYDESI" TextChanged="CHERCHDESI"/>
+            <!--<Label Content="Nom Client  :"  Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="0 0 0 0" x:Name="CHERCHECLIENTICE"/>-->
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" HorizontalAlignment="Left"  Margin="90,10,0,10" Width="165">
+            <Label Content="CHERCHER REFER :" Foreground="White" FontSize="16"  Margin="0,14,0,0"/>
+            <TextBox Width="165" HorizontalAlignment="Left" x:Name="GETBYREF" TextChanged="CHERCHREFE"/>
+            <!--<Label Content="Nom Client  :"  Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="0 0 0 0" x:Name="CHERCHECLIENTICE"/>-->
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4" HorizontalAlignment="Left"  Margin="30 10">
+            <Label Content="Reference :"  Margin="10 0 0 0"/>
+            <TextBox Width="100" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="A"/>
+            <Label Content="Designation :" Margin="10 0 0 0"/>
+            <TextBox Width="200" Height="100" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="B"/>
+            <Label Content="Prix HT :" Margin="10 0 0 0"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="C"/>
+            <Label Content="couleur" Margin="10 0 0 0"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="D"/>
+            <Label Content="Unite" Margin="10 0 0 0"/>
+
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="E"/>
+
+            <Label Content="categorie" Margin="10 0 0 0"/>
+            <TextBox Width="200" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="F"/>
+
+
+            <Button Width="146" Height="35" Content="Enregistrer" FontFamily="arial" Foreground="White" Background="LightSeaGreen" Margin="0 10" Click="AJOUCLIENT"></Button>
+
+
+        </StackPanel>
+        <Button Content="Actualiser" Background="LightSeaGreen" Foreground="White" FontFamily="arial" Height="35" VerticalAlignment="Top"   Margin="25,40,10,0" Grid.Column="3" Click="TABLECLIENT" ></Button>
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="1" HorizontalAlignment="Right"  Margin="30 10">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#99CD0000" Offset="0"/>
+                    <GradientStop Color="#9990D9E4" Offset="1"/>
+                    <GradientStop Color="#FFE09393" Offset="0.49"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Content="REFERENCE :"  Margin="10 0 0 10" HorizontalAlignment="Center" Width="97"/>
+            <TextBox Width="107" HorizontalAlignment="Center" Margin="10 0 0 0" x:Name="SUPTXT"/>
+            <Button Content="SUPRIMMER"  Width="93" Height="20"  Margin="50 10" Click="SUP" FontFamily="arial" Foreground="White" Background="LightSeaGreen" />
+        </StackPanel>
+        <DataGrid ColumnWidth="100" x:Name="ART" AlternatingRowBackground="Gray" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="90,0,10,0.333" SelectedCellsChanged="ARTICLESELECTE">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0D6E9B" Offset="0"/>
+                    <GradientStop Color="#4C5786C9" Offset="1"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+
+        </DataGrid>
+
+    </Grid>
+</UserControl>

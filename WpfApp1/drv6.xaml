@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="WpfApp1.drv6"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF48D7EE" Offset="0"/>
+                <GradientStop Color="#FF0E0ED3" Offset="1"/>
+                <GradientStop Color="#FF56D462" Offset="0.292"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" HorizontalAlignment="Left"  Margin="30 10">
+            <Label Content="Nom Client  :" Foreground="White" FontSize="16"  Margin="10 14 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="0 0 0 0" x:Name="GETBYNM" TextChanged="CHERCHECLIENTPARNOM"/>
+            <!--<Label Content="Nom Client  :"  Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="0 0 0 0" x:Name="CHERCHECLIENTICE"/>-->
+            
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4" HorizontalAlignment="Left"  Margin="30 10">
+            <Label Content="ICE  :"  Margin="10 40 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="A"/>
+            <Label Content="NOM CLIENT :" Margin="10 0 0 0"/>
+            <TextBox Width="150" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="B"/>
+            <Label Content="PRENOM CLIENT :" Margin="10 0 0 0"/>
+            <TextBox Width="150" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="C"/>
+            <Label Content="ADRESSE :"  Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="D"/>
+            <Label Content="NUMERO DE TELEPHONE :" Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="E"/>
+            <Label Content="E-MAIL :" Margin="10 0 0 0"/>
+            <TextBox Width="151" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="F"/>
+
+
+            <Button Content="Enregistrer client" Foreground="White" FontSize="14" FontFamily="arial" Width="157" Height="46"  Margin="0 25 0 0" Click="ISERERCLIENT">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="LightSeaGreen" Offset="0"/>
+                        <GradientStop Color="#66213BB4" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+        </StackPanel>
+        <Button Content="Clients" Click="TABLECLIENT"  Height="44" VerticalAlignment="Top"   Margin="10,27,10,0" Grid.Column="3" Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial" />
+        <StackPanel Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1"  Margin="120,10,30,10">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#CCCD0000" Offset="0"/>
+                    <GradientStop Color="#E5E57D7D" Offset="0.493"/>
+                    <GradientStop Color="#E5E57D7D" Offset="0.493"/>
+                    <GradientStop Color="#99303CB4" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Content="            ICE CLIENT "  Margin="50,0"/>
+            <TextBox Width="150" HorizontalAlignment="Left" Margin="50,0,0,0" x:Name="SUP" Height="25"/>
+            <Button Content="SUPRIMMER" Width="150" Height="20"  Margin="50 13" Click="SUPCLIENT"  Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial"/>
+        </StackPanel>
+        <DataGrid x:Name="CLI" AlternatingRowBackground="Gray" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="90,0,10,0.333" SelectedCellsChanged="CLISELECT">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6DC98F" Offset="0"/>
+                    <GradientStop Color="#7F0A539C" Offset="1"/>
+                    <GradientStop Color="#9E368896" Offset="0.549"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+
+
+
+        </DataGrid>
+
+    </Grid>
+</UserControl>

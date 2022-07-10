@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="WpfApp1.drv4"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF48B2EE"/>
+                <GradientStop Color="#FF56D462" Offset="0.605"/>
+                <GradientStop Color="#FF095CD3" Offset="1"/>
+                <GradientStop Color="#FF17B692" Offset="0.441"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4" HorizontalAlignment="Left"  Margin="30 10">
+
+
+            <Label Content="Numero d'achat (entier) :"  Margin="10 40 0 0"/>
+            <TextBox Width="145" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="A" GotFocus="NUMACHAT"/>
+            <Label Content="Numero de fournisseur :"  Margin="10 0 0 0"/>
+            <TextBox Width="145" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="B"/>
+            <Label Content="Reference Article :" Margin="10 0 0 0"/>
+            <TextBox Width="145" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="C"/>
+            <Label Content="Quantité achete :" Margin="10 0 0 10"/>
+            <TextBox Width="145" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="D"/>
+
+            <Label Content="Date :" Margin="10 0 0 0" />
+            <DatePicker x:Name="DATEACH"></DatePicker>
+            <Label Content="Mode de paiement" Margin="10 0 0 10"/>
+            <TextBox Width="145" HorizontalAlignment="Left" Margin="10 0 0 0" x:Name="E"/>
+
+
+            <Button  Content="AJOUTER"   Width="129" Height="35"  Margin="0 50" Click="ajouachat" Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial"></Button>
+
+
+        </StackPanel>
+        <Button Content="AFFICHER" Height="35" VerticalAlignment="Top"   Margin="10,40,10,0" Grid.Column="3" Click="valide1" Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial"/>
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="1" HorizontalAlignment="Right"  Margin="30 10">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#99CD0000" Offset="0"/>
+                    <GradientStop Color="#66729CD6" Offset="1"/>
+                    <GradientStop Color="#FFE09393" Offset="0.654"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Label Content="NUMERO D'ACHAT :"  Margin="10 0 0 0" HorizontalAlignment="Center"/>
+            <TextBox Width="100" HorizontalAlignment="Center" Margin="10 0 0 0" x:Name="SUP"/>
+            <Button Content="SUPRIMMER" Width="103" Height="20"  Margin="20 10" Click="supachat" Foreground="White" Background="LightSeaGreen" FontSize="14" FontFamily="arial"></Button>
+        </StackPanel>
+        <DataGrid x:Name="ACH" AlternatingRowBackground="Gray" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="92,0,8,0" SelectedCellsChanged="SELECTACHAT">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0D6E9B" Offset="0"/>
+                    <GradientStop Color="#4C5786C9" Offset="1"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+
+           
+            
+        </DataGrid>
+
+
+
+    </Grid>
+</UserControl>

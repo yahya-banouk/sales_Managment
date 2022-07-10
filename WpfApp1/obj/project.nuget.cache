@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "20LyMJo+WXbP5sTmFEi4mneyV8ziyjujRUZE1yWRe2T1vB7GPTGwI07Himlpk3mpYtquqrRhf3Jn6cDH381ZMw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yahyabanouk\\Desktop\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yahyabanouk\\.nuget\\packages\\microsoft.reportingservices.reportviewercontrol.winforms\\150.1440.0\\microsoft.reportingservices.reportviewercontrol.winforms.150.1440.0.nupkg.sha512",
+    "C:\\Users\\yahyabanouk\\.nuget\\packages\\microsoft.sqlserver.types\\14.0.314.76\\microsoft.sqlserver.types.14.0.314.76.nupkg.sha512"
+  ],
+  "logs": []
+}

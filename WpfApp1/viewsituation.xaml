@@ -1,0 +1,15 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="WpfApp1.viewsituation"
+        mc:Ignorable="d"
+        Title="SITUATION" Height="450" Width="800" Loaded="situationloaded">
+    <Grid>
+
+        <Viewer:CrystalReportsViewer x:Name="impsitu" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
+
+    </Grid>
+</Window>

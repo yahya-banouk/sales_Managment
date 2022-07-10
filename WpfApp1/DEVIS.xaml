@@ -1,0 +1,16 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="WpfApp1.DEVIS"
+        mc:Ignorable="d"
+        Icon="img/ORBI.png"
+        Title="DEVIS" Height="606.944" Width="913.889" Loaded="DEVIS1" >
+    <Grid Margin="0,0,-110,-156">
+
+        <Viewer:CrystalReportsViewer HorizontalAlignment="Left" Height="575" VerticalAlignment="Top" Width="902" x:Name="zb"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetsituation" targetNamespace="http://tempuri.org/DataSetsituation.xsd" xmlns:mstns="http://tempuri.org/DataSetsituation.xsd" xmlns="http://tempuri.org/DataSetsituation.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetsituation" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetsituation" msprop:Generator_UserDSName="DataSetsituation">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="situation" msprop:Generator_TableClassName="situationDataTable" msprop:Generator_TableVarName="tablesituation" msprop:Generator_TablePropName="situation" msprop:Generator_RowDeletingName="situationRowDeleting" msprop:Generator_RowChangingName="situationRowChanging" msprop:Generator_RowEvHandlerName="situationRowChangeEventHandler" msprop:Generator_RowDeletedName="situationRowDeleted" msprop:Generator_UserTableName="situation" msprop:Generator_RowChangedName="situationRowChanged" msprop:Generator_RowEvArgName="situationRowChangeEvent" msprop:Generator_RowClassName="situationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMFACTURE" msprop:Generator_ColumnVarNameInTable="columnNUMFACTURE" msprop:Generator_ColumnPropNameInRow="NUMFACTURE" msprop:Generator_ColumnPropNameInTable="NUMFACTUREColumn" msprop:Generator_UserColumnName="NUMFACTURE" type="xs:int" minOccurs="0" />
+              <xs:element name="ICECLIENT" msprop:Generator_ColumnVarNameInTable="columnICECLIENT" msprop:Generator_ColumnPropNameInRow="ICECLIENT" msprop:Generator_ColumnPropNameInTable="ICECLIENTColumn" msprop:Generator_UserColumnName="ICECLIENT" type="xs:string" minOccurs="0" />
+              <xs:element name="AVANCEDONNEE" msprop:Generator_ColumnVarNameInTable="columnAVANCEDONNEE" msprop:Generator_ColumnPropNameInRow="AVANCEDONNEE" msprop:Generator_ColumnPropNameInTable="AVANCEDONNEEColumn" msprop:Generator_UserColumnName="AVANCEDONNEE" type="xs:double" minOccurs="0" />
+              <xs:element name="RESTE" msprop:Generator_ColumnVarNameInTable="columnRESTE" msprop:Generator_ColumnPropNameInRow="RESTE" msprop:Generator_ColumnPropNameInTable="RESTEColumn" msprop:Generator_UserColumnName="RESTE" type="xs:double" minOccurs="0" />
+              <xs:element name="DATEDAVANCE" msprop:Generator_ColumnVarNameInTable="columnDATEDAVANCE" msprop:Generator_ColumnPropNameInRow="DATEDAVANCE" msprop:Generator_ColumnPropNameInTable="DATEDAVANCEColumn" msprop:Generator_UserColumnName="DATEDAVANCE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATEDECHEANCE" msprop:Generator_ColumnVarNameInTable="columnDATEDECHEANCE" msprop:Generator_ColumnPropNameInRow="DATEDECHEANCE" msprop:Generator_ColumnPropNameInTable="DATEDECHEANCEColumn" msprop:Generator_UserColumnName="DATEDECHEANCE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NUMPAPIER" msprop:Generator_ColumnVarNameInTable="columnNUMPAPIER" msprop:Generator_ColumnPropNameInRow="NUMPAPIER" msprop:Generator_ColumnPropNameInTable="NUMPAPIERColumn" msprop:Generator_UserColumnName="NUMPAPIER" type="xs:int" minOccurs="0" />
+              <xs:element name="DATEVENTE" msprop:Generator_ColumnVarNameInTable="columnDATEVENTE" msprop:Generator_ColumnPropNameInRow="DATEVENTE" msprop:Generator_ColumnPropNameInTable="DATEVENTEColumn" msprop:Generator_UserColumnName="DATEVENTE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NOMCLIENT" msprop:Generator_ColumnVarNameInTable="columnNOMCLIENT" msprop:Generator_ColumnPropNameInRow="NOMCLIENT" msprop:Generator_ColumnPropNameInTable="NOMCLIENTColumn" msprop:Generator_UserColumnName="NOMCLIENT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

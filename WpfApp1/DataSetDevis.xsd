@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetDevis" targetNamespace="http://tempuri.org/DataSetDevis.xsd" xmlns:mstns="http://tempuri.org/DataSetDevis.xsd" xmlns="http://tempuri.org/DataSetDevis.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetDevis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetDevis" msprop:Generator_UserDSName="DataSetDevis">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DEVISTABLE" msprop:Generator_TableClassName="DEVISTABLEDataTable" msprop:Generator_TableVarName="tableDEVISTABLE" msprop:Generator_TablePropName="DEVISTABLE" msprop:Generator_RowDeletingName="DEVISTABLERowDeleting" msprop:Generator_RowChangingName="DEVISTABLERowChanging" msprop:Generator_RowEvHandlerName="DEVISTABLERowChangeEventHandler" msprop:Generator_RowDeletedName="DEVISTABLERowDeleted" msprop:Generator_UserTableName="DEVISTABLE" msprop:Generator_RowChangedName="DEVISTABLERowChanged" msprop:Generator_RowEvArgName="DEVISTABLERowChangeEvent" msprop:Generator_RowClassName="DEVISTABLERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMDEVIS" msprop:Generator_ColumnVarNameInTable="columnNUMDEVIS" msprop:Generator_ColumnPropNameInRow="NUMDEVIS" msprop:Generator_ColumnPropNameInTable="NUMDEVISColumn" msprop:Generator_UserColumnName="NUMDEVIS" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMCLIENT" msprop:Generator_ColumnVarNameInTable="columnNOMCLIENT" msprop:Generator_ColumnPropNameInRow="NOMCLIENT" msprop:Generator_ColumnPropNameInTable="NOMCLIENTColumn" msprop:Generator_UserColumnName="NOMCLIENT" type="xs:string" minOccurs="0" />
+              <xs:element name="REFERENCE" msprop:Generator_ColumnVarNameInTable="columnREFERENCE" msprop:Generator_ColumnPropNameInRow="REFERENCE" msprop:Generator_ColumnPropNameInTable="REFERENCEColumn" msprop:Generator_UserColumnName="REFERENCE" type="xs:string" minOccurs="0" />
+              <xs:element name="QT" msprop:Generator_ColumnVarNameInTable="columnQT" msprop:Generator_ColumnPropNameInRow="QT" msprop:Generator_ColumnPropNameInTable="QTColumn" msprop:Generator_UserColumnName="QT" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="REMISE" msprop:Generator_ColumnVarNameInTable="columnREMISE" msprop:Generator_ColumnPropNameInRow="REMISE" msprop:Generator_ColumnPropNameInTable="REMISEColumn" msprop:Generator_UserColumnName="REMISE" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="DATEDEVIS" msprop:Generator_ColumnVarNameInTable="columnDATEDEVIS" msprop:Generator_ColumnPropNameInRow="DATEDEVIS" msprop:Generator_ColumnPropNameInTable="DATEDEVISColumn" msprop:Generator_UserColumnName="DATEDEVIS" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PRIX" msprop:Generator_ColumnVarNameInTable="columnPRIX" msprop:Generator_ColumnPropNameInRow="PRIX" msprop:Generator_ColumnPropNameInTable="PRIXColumn" msprop:Generator_UserColumnName="PRIX" type="xs:double" minOccurs="0" />
+              <xs:element name="NUMPAPIER" msprop:Generator_ColumnVarNameInTable="columnNUMPAPIER" msprop:Generator_ColumnPropNameInRow="NUMPAPIER" msprop:Generator_ColumnPropNameInTable="NUMPAPIERColumn" msprop:Generator_UserColumnName="NUMPAPIER" type="xs:int" minOccurs="0" />
+              <xs:element name="ADRESSECLIENT" msprop:Generator_ColumnVarNameInTable="columnADRESSECLIENT" msprop:Generator_ColumnPropNameInRow="ADRESSECLIENT" msprop:Generator_ColumnPropNameInTable="ADRESSECLIENTColumn" msprop:Generator_UserColumnName="ADRESSECLIENT" type="xs:string" minOccurs="0" />
+              <xs:element name="DESIHNATION" msprop:Generator_ColumnVarNameInTable="columnDESIHNATION" msprop:Generator_ColumnPropNameInRow="DESIHNATION" msprop:Generator_ColumnPropNameInTable="DESIHNATIONColumn" msprop:Generator_UserColumnName="DESIHNATION" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
